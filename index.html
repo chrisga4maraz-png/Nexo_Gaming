@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexo Gaming</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                NEXO <span>GAMING</span>
+            </div>
+
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#noticias">Noticias</a>
+                </li>
+
+                <li>
+                    <a href="#wildrift">Wild Rift</a>
+                </li>
+
+                <li>
+                    <a href="#juegos">Juegos</a>
+                </li>
+
+                <li>
+                    <a href="#comunidad">Comunidad</a>
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#comunidad"
+                class="boton-comunidad"
+            >
+                Comunidad
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =================================================
+             BIENVENIDA
+        ================================================== -->
+
+        <section class="bienvenida">
+
+            <h1>
+                Bienvenido a
+                <span>Nexo Gaming</span>
+            </h1>
+
+            <p>
+                Noticias, esports y comunidad gamer
+                en un solo lugar.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOTICIA PRINCIPAL
+        ================================================== -->
+
+        <section class="noticia-principal neon">
+
+            <div class="principal-contenido">
+
+                <span class="categoria">
+                    DESTACADO
+                </span>
+
+
+                <h2>
+                    El mundo gaming nunca se detiene
+                </h2>
+
+
+                <p>
+                    Descubrí las últimas noticias,
+                    competencias, actualizaciones y
+                    novedades de tus juegos favoritos.
+                </p>
+
+
+                <a
+                    href="#noticias"
+                    class="leer-mas"
+                >
+                    Ver noticias
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOTICIAS
+        ================================================== -->
+
+        <section id="noticias">
+
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Últimas noticias
+                </h2>
+
+                <span>
+                    VER TODAS →
+                </span>
+
+            </div>
+
+
+
+            <div class="noticias-grid">
+
+
+                <article class="noticia neon">
+
+                    <div class="imagen-noticia">
+
+                        IMAGEN DE NOTICIA
+
+                    </div>
+
+
+                    <div class="noticia-contenido">
+
+                        <small>
+                            ESPORTS
+                        </small>
+
+
+                        <h3>
+                            Los esports siguen creciendo
+                            en LATAM
+                        </h3>
+
+
+                        <p>
+                            La escena competitiva
+                            latinoamericana continúa
+                            desarrollándose y nuevos
+                            equipos buscan hacerse un lugar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="noticia neon">
+
+                    <div class="imagen-noticia">
+
+                        IMAGEN DE NOTICIA
+
+                    </div>
+
+
+                    <div class="noticia-contenido">
+
+                        <small>
+                            GAMING
+                        </small>
+
+
+                        <h3>
+                            Los juegos competitivos
+                            que dominan la escena
+                        </h3>
+
+
+                        <p>
+                            Repasamos algunos de los
+                            títulos que mantienen activa
+                            a la comunidad competitiva.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="noticia neon">
+
+                    <div class="imagen-noticia">
+
+                        IMAGEN DE NOTICIA
+
+                    </div>
+
+
+                    <div class="noticia-contenido">
+
+                        <small>
+                            COMUNIDAD
+                        </small>
+
+
+                        <h3>
+                            Nace una nueva comunidad gamer
+                        </h3>
+
+
+                        <p>
+                            Jugadores y equipos comienzan
+                            a conectarse para compartir
+                            partidas y competir.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WILD RIFT LATAM
+        ================================================== -->
+
+        <section
+            id="wildrift"
+            class="wildrift neon"
+        >
+
+            <h2>
+                Wild Rift
+                <span>LATAM</span>
+            </h2>
+
+
+            <p>
+                Todo lo relacionado con League of Legends:
+                Wild Rift y su escena competitiva.
+            </p>
+
+
+            <div class="wildrift-menu">
+
+
+                <button
+                    class="wildrift-btn activo"
+                    onclick="seleccionarWR(this)"
+                >
+                    Noticias
+                </button>
+
+
+                <button
+                    class="wildrift-btn"
+                    onclick="seleccionarWR(this)"
+                >
+                    Parches
+                </button>
+
+
+                <button
+                    class="wildrift-btn"
+                    onclick="seleccionarWR(this)"
+                >
+                    Campeones
+                </button>
+
+
+                <button
+                    class="wildrift-btn"
+                    onclick="seleccionarWR(this)"
+                >
+                    Builds
+                </button>
+
+
+                <button
+                    class="wildrift-btn"
+                    onclick="seleccionarWR(this)"
+                >
+                    Competitivo
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             JUEGOS
+        ================================================== -->
+
+        <section
+            id="juegos"
+            class="juegos"
+        >
+
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Juegos
+                </h2>
+
+                <span>
+                    EXPLORAR
+                </span>
+
+            </div>
+
+
+
+            <div class="juegos-grid">
+
+
+                <div
+                    class="juego"
+                    onclick="seleccionarJuego('League of Legends')"
+                >
+
+                    <h3>
+                        League of Legends
+                    </h3>
+
+                    <p>
+                        Noticias y competitivo
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="juego"
+                    onclick="seleccionarJuego('Wild Rift')"
+                >
+
+                    <h3>
+                        Wild Rift
+                    </h3>
+
+                    <p>
+                        Noticias y guías
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="juego"
+                    onclick="seleccionarJuego('Valorant')"
+                >
+
+                    <h3>
+                        Valorant
+                    </h3>
+
+                    <p>
+                        Esports y actualidad
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="juego"
+                    onclick="seleccionarJuego('Apex Legends')"
+                >
+
+                    <h3>
+                        Apex Legends
+                    </h3>
+
+                    <p>
+                        Noticias y competitivo
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMUNIDAD
+        ================================================== -->
+
+        <section
+            id="comunidad"
+            class="wildrift neon"
+        >
+
+            <h2>
+                Comunidad
+                <span>Nexo</span>
+            </h2>
+
+
+            <p>
+                Un espacio para jugadores, equipos
+                y amantes de los esports.
+            </p>
+
+
+            <button
+                class="wildrift-btn"
+                onclick="entrarComunidad()"
+            >
+                Entrar a la comunidad
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+
+            © 2026
+
+            <strong>
+                Nexo Gaming
+            </strong>
+
+            |
+
+            Noticias · Esports · Comunidad
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
