@@ -1,0 +1,1251 @@
+/* =====================================================
+   NEXO GAMING V2
+   PALETA:
+   Violeta + Celeste + Rosa
+===================================================== */
+
+:root {
+    --fondo: #070711;
+    --fondo-secundario: #0e0e1b;
+
+    --violeta: #8b5cf6;
+    --violeta-claro: #a78bfa;
+
+    --celeste: #22d3ee;
+    --rosa: #ec4899;
+
+    --blanco: #ffffff;
+    --texto: #d7d7e3;
+    --texto-suave: #9292a8;
+
+    --borde: #29293d;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(139, 92, 246, 0.13),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(34, 211, 238, 0.10),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(236, 72, 153, 0.08),
+            transparent 35%
+        ),
+
+        var(--fondo);
+
+    color: var(--blanco);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 80%
+    );
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(7, 7, 17, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+
+    box-shadow:
+        0 5px 30px rgba(139, 92, 246, 0.08);
+}
+
+
+.navbar {
+
+    max-width: 1300px;
+
+    height: 78px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: var(--violeta-claro);
+
+    text-shadow:
+        0 0 8px rgba(139, 92, 246, 0.8),
+        0 0 25px rgba(139, 92, 246, 0.4);
+}
+
+
+.logo span {
+
+    color: white;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.4);
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+.menu a {
+
+    position: relative;
+
+    color: var(--texto);
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--violeta),
+            var(--celeste)
+        );
+
+    box-shadow:
+        0 0 8px var(--violeta);
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+
+    color: white;
+
+    text-shadow:
+        0 0 10px var(--celeste);
+}
+
+
+.menu a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   BOTÓN COMUNIDAD
+===================================================== */
+
+.boton-comunidad {
+
+    position: relative;
+
+    padding: 11px 19px;
+
+    border-radius: 8px;
+
+    color: white !important;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--violeta),
+            var(--rosa)
+        );
+
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.45);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+
+.boton-comunidad::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+    transition: 0.5s;
+}
+
+
+.boton-comunidad:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.7),
+        0 0 30px rgba(236, 72, 153, 0.3);
+}
+
+
+.boton-comunidad:hover::before {
+
+    left: 100%;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+
+/* =====================================================
+   BIENVENIDA
+===================================================== */
+
+.bienvenida {
+
+    margin-bottom: 35px;
+
+    animation: aparecer 0.8s ease;
+}
+
+
+.bienvenida h1 {
+
+    font-size: 44px;
+
+    margin-bottom: 12px;
+}
+
+
+.bienvenida h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--violeta-claro),
+            var(--celeste),
+            var(--rosa)
+        );
+
+    background-size: 200% auto;
+
+    color: transparent;
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    animation: gradiente 5s linear infinite;
+}
+
+
+.bienvenida p {
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   EFECTO NEÓN GENERAL
+===================================================== */
+
+.neon {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.neon::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 1px;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--violeta),
+            var(--celeste),
+            var(--rosa),
+            transparent
+        );
+
+    background-size: 300% 100%;
+
+    animation: bordeNeon 5s linear infinite;
+
+    pointer-events: none;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+}
+
+
+/* =====================================================
+   NOTICIA PRINCIPAL
+===================================================== */
+
+.noticia-principal {
+
+    position: relative;
+
+    min-height: 410px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 45px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(34, 211, 238, 0.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 30% 70%,
+            rgba(236, 72, 153, 0.15),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #1b1234,
+            #0d0d18
+        );
+
+    border: 1px solid #30264d;
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.10),
+        inset 0 0 50px rgba(139, 92, 246, 0.04);
+
+    margin-bottom: 55px;
+}
+
+
+.noticia-principal::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    right: 10%;
+
+    top: 15%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(34, 211, 238, 0.16),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    animation: flotar 5s ease-in-out infinite;
+}
+
+
+.principal-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+}
+
+
+.categoria {
+
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--violeta),
+            var(--rosa)
+        );
+
+    padding: 7px 13px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 16px;
+
+    box-shadow:
+        0 0 12px rgba(139, 92, 246, 0.4);
+}
+
+
+.noticia-principal h2 {
+
+    font-size: 40px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.08);
+}
+
+
+.noticia-principal p {
+
+    color: #c7c7d4;
+
+    line-height: 1.6;
+}
+
+
+.leer-mas {
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--celeste);
+
+    color: white;
+
+    border-radius: 7px;
+
+    background: rgba(34, 211, 238, 0.08);
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.25);
+
+    transition: 0.3s;
+}
+
+
+.leer-mas:hover {
+
+    background: var(--celeste);
+
+    color: #071018;
+
+    box-shadow:
+        0 0 15px var(--celeste),
+        0 0 35px rgba(34, 211, 238, 0.4);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo-seccion {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.titulo-seccion h2 {
+
+    font-size: 26px;
+}
+
+
+.titulo-seccion h2::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 4px;
+
+    height: 24px;
+
+    margin-right: 10px;
+
+    vertical-align: -4px;
+
+    background:
+        linear-gradient(
+            var(--violeta),
+            var(--celeste)
+        );
+
+    box-shadow:
+        0 0 10px var(--violeta);
+}
+
+
+.titulo-seccion span {
+
+    color: var(--celeste);
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   NOTICIAS
+===================================================== */
+
+.noticias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.noticia {
+
+    position: relative;
+
+    background: rgba(16, 16, 28, 0.85);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s,
+        border-color 0.35s;
+}
+
+
+.noticia:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--violeta);
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.25),
+        0 0 35px rgba(34, 211, 238, 0.08);
+}
+
+
+.imagen-noticia {
+
+    height: 180px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(139, 92, 246, 0.3),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 70% 70%,
+            rgba(34, 211, 238, 0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #17112b,
+            #10101c
+        );
+
+    color: #77778a;
+
+    font-size: 13px;
+
+    overflow: hidden;
+}
+
+
+.imagen-noticia::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--celeste),
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px var(--celeste);
+
+    transform: rotate(-20deg);
+
+    animation: pasarLuz 4s linear infinite;
+}
+
+
+.noticia-contenido {
+
+    padding: 21px;
+}
+
+
+.noticia-contenido small {
+
+    color: var(--celeste);
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.noticia-contenido h3 {
+
+    margin: 10px 0;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+}
+
+
+.noticia-contenido p {
+
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   WILD RIFT
+===================================================== */
+
+.wildrift {
+
+    position: relative;
+
+    margin-top: 60px;
+
+    padding: 38px;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(34, 211, 238, 0.12),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(139, 92, 246, 0.12),
+            transparent 30%
+        ),
+
+        #10101b;
+
+    border: 1px solid #30284a;
+
+    box-shadow:
+        inset 0 0 40px rgba(139, 92, 246, 0.03);
+}
+
+
+.wildrift h2 {
+
+    font-size: 31px;
+
+    margin-bottom: 10px;
+}
+
+
+.wildrift h2 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--celeste),
+            var(--violeta)
+        );
+
+    color: transparent;
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+}
+
+
+.wildrift > p {
+
+    color: var(--texto-suave);
+
+    margin-bottom: 27px;
+}
+
+
+.wildrift-menu {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.wildrift-btn {
+
+    position: relative;
+
+    padding: 12px 19px;
+
+    background: #171724;
+
+    border: 1px solid #343449;
+
+    border-radius: 7px;
+
+    color: #ccc;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+
+.wildrift-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 80%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.25),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 0.5s;
+}
+
+
+.wildrift-btn:hover::before {
+
+    left: 130%;
+}
+
+
+.wildrift-btn:hover,
+.wildrift-btn.activo {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--violeta),
+            #7042d9
+        );
+
+    color: white;
+
+    border-color: var(--violeta);
+
+    box-shadow:
+        0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+
+/* =====================================================
+   JUEGOS
+===================================================== */
+
+.juegos {
+
+    margin-top: 60px;
+}
+
+
+.juegos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.juego {
+
+    position: relative;
+
+    padding: 32px 20px;
+
+    text-align: center;
+
+    border-radius: 13px;
+
+    background: #11111d;
+
+    border: 1px solid #27273a;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.35s;
+}
+
+
+.juego::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -2px;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--violeta),
+            var(--celeste)
+        );
+
+    box-shadow:
+        0 0 12px var(--violeta);
+
+    transition: 0.6s;
+}
+
+
+.juego:hover::before {
+
+    left: 100%;
+}
+
+
+.juego:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--celeste);
+
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, 0.18),
+        0 0 30px rgba(139, 92, 246, 0.08);
+}
+
+
+.juego h3 {
+
+    margin-bottom: 9px;
+}
+
+
+.juego p {
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   COMUNIDAD
+===================================================== */
+
+#comunidad {
+
+    margin-top: 60px;
+}
+
+
+#comunidad h2 span {
+
+    color: var(--rosa);
+
+    text-shadow:
+        0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    margin-top: 80px;
+
+    padding: 38px 20px;
+
+    text-align: center;
+
+    background: #090912;
+
+    border-top:
+        1px solid rgba(139, 92, 246, 0.25);
+
+    color: #77778a;
+
+    box-shadow:
+        0 -10px 40px rgba(139, 92, 246, 0.04);
+}
+
+
+footer strong {
+
+    color: var(--violeta-claro);
+
+    text-shadow:
+        0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+@keyframes bordeNeon {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes pasarLuz {
+
+    0% {
+        transform:
+            translateX(-60%)
+            rotate(-20deg);
+    }
+
+    100% {
+        transform:
+            translateX(60%)
+            rotate(-20deg);
+    }
+}
+
+
+@keyframes gradiente {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .juegos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .noticia-principal h2 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .juegos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida h1 {
+        font-size: 33px;
+    }
+
+    .noticia-principal {
+        padding: 28px;
+    }
+
+    .noticia-principal h2 {
+        font-size: 27px;
+    }
+
+    .wildrift {
+        padding: 25px;
+    }
+
+    .boton-comunidad {
+        display: none;
+    }
+}
